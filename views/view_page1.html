@@ -1,11 +1,30 @@
 <div>
-    <div class="col-md-12 fullheight text-center" id="page_1">
-        <p class="page-title">{{text.title}}</p>
-        <div class="page-data">
-            {{text.desc}}
+    <div class="col-md-12 text-center" id="page_1">
+        <div class="row">
+            <p class="page-title">{{text.title}}</p>
+            <div class="page-data">
+                {{text.desc}}
+            </div>
         </div>
         <br>
         <br>
-        <a class="btn btn-1 btn-1e" href="#!page2">Next Page</a>
+        <div class="row"> 
+            <div class="col-lg-10 text-center">
+                <div class="col-lg-2"></div>
+                <div class="home-item col-lg-2" ng-repeat="item in items" animate-on-load>
+                    <a href="{{item.url}}" title="{{item.linkTitle}}"><i class="{{item.className}}"></i></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="page-intro col-lg-offset-2 col-md-8">
+                {{text.intro}}
+            </div>
+        </div>
+        <br>
+        <br>
+        <a class="btn footer-nav" href="#!realisations" title="Voir mon portfolio">Voir mon Portfolio <i class="fa fa-angle-down"></i></a>
     </div>
 </div>

@@ -1,41 +1,37 @@
-/**
- * angularSimpleWebApp Module
- *
- * Description
- */
-var app = angular.module('angularSimpleWebApp', ['ngRoute', 'ngAnimate']);
+var app = angular.module('website', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'views/view_page1.html',
             controller: 'Page1Ctrl',
-            controllerAs: 'page1'
+            controllerAs: 'bienvenue'
         })
-        .when('/page1', {
+        .when('/bienvenue', {
             templateUrl: 'views/view_page1.html',
             controller: 'Page1Ctrl',
-            controllerAs: 'page1'
+            controllerAs: 'bienvenue'
         })
-        .when('/page2', {
+        .when('/realisations', {
             templateUrl: 'views/view_page2.html',
             controller: 'Page2Ctrl',
-            controllerAs: 'page2'
+            controllerAs: 'realisations'
         })
-        .when('/page3', {
+        .when('/realisations/barrette-structural', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/barrette-structural'
+        })
+        .when('/realisations/open-joist-triforce', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/open-joist-triforce'
+        })
+
+        .when('/engagez-moi', {
             templateUrl: 'views/view_page3.html',
             controller: 'Page3Ctrl',
-            controllerAs: 'page3'
-        })
-        .when('/page4', {
-            templateUrl: 'views/view_page4.html',
-            controller: 'Page4Ctrl',
-            controllerAs: 'page4'
-        })
-        .when('/page5', {
-            templateUrl: 'views/view_page5.html',
-            controller: 'Page5Ctrl',
-            controllerAs: 'page5'
+            controllerAs: 'engagez-moi'
         })
         .otherwise({
             redirectTo: '/'

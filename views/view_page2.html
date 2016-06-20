@@ -1,11 +1,26 @@
-<div>
-    <div class="col-md-12 fullheight text-center" id="page_2">
-        <p class="page-title">{{text.title}}</p>
-        <div class="page-data">
-            {{text.desc}}
+<div id="page_2" class="container">
+    <div class="col-md-12 text-center">
+        <div class="row">
+            <p class="page-title">{{text.title}}</p>
+            <div class="page-data">
+                {{text.desc}}
+            </div>
         </div>
-        <br><br>
-        <a class="btn btn-1 btn-1e" href="#!page1">Previous Page</a>
-        <a class="btn btn-1 btn-1e" href="#!page3">Next Page</a>
+        <div class="row">
+            <div class="">
+        		<div class="realisation-item col-md-4" ng-repeat="item in items" animate-on-load>
+        			<a href="#!{{item.url}}"><img ng-src="{{item.imagePath}}" />
+        			 <h3>{{item.name}}</h3>
+                    </a>
+        		</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn footer-nav" href="#!engagez-moi">Engagez-moi <i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
     </div>
 </div>
