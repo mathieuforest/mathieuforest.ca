@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
 /* Global Style */
 
 * {
@@ -32,37 +27,12 @@ h1, .h1, h2, .h2, h3, .h3 {
     padding: 0;
 }
 
-/*------------------------------------------------------------------------------*/
-
-
 /* ------------------------------------------------------ */
 
 /* Reset */
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     padding: 0;
-}
-
-/*------------------------------------------------------------------------------*/
-
-
-/* Page Style */
-
-.page-title {
-    margin-top: 4em;
-    font-size: 3em;
-}
-
-a {
-    color: #fff;
-}
-
-@media screen and (max-width: 720px) {
-    .page-title {
-        margin-top: 125px;
-        font-size: 2.5em;
-        line-height: 1.2em;
-    }
 }
 
 /*------------------------------------------------------------------------------*/
@@ -216,94 +186,34 @@ header nav a {
     }
 }
 
-/* slide in from the bottom */
-@keyframes slideInUp {
-    from    { transform: translateY(150%); }
-    to      { transform: translateY(0); }
+/* Footer nav */
+.btn.footer-nav {
+    font-size: 1.2em;
 }
-@keyframes slideOutUp {
-    from    { transform: translateY(0); }
-    to      { transform: translateY(-100%); }
-}
-
-/* page specific animations ------------------------ */
-
-.page {
-    bottom:0; 
-    position:absolute; 
-    text-align:center;
-    top:0;  
-    width:100%;
-    height: 100%;
-}
-.page.ng-enter {
-    z-index: 9999;
-}
-.page.ng-leave {
-    z-index: 8888;
-}
-
-/* home -------------------------- */
-.page-home.ng-enter {
-    animation: slideInUp 0.5s both ease-in;
-}
-.page-home.ng-leave {
-    animation: slideOutUp 0.5s both ease-in;
-}
-
-.home-item.ng-enter {
-  -webkit-transition: 0.4s ease-in all;
-  transition: 0.4s ease-in all;
-  opacity:0;
-  -webkit-transform:scale(0);
-  transform:scale(0);
-}
-.home-item.ng-enter-stagger {
-  transition-delay: 0.5s;
-  transition-duration: 0s;
-}
-.home-item.ng-enter.ng-enter-active {
-  opacity:1;
-  -webkit-transform:scale(1);
-  transform:scale(1);
-}
-
-/* realisations ------------------------ */
-.page-realisations.ng-enter {
-    animation: slideInUp 0.5s both ease-in;
-}
-.page-realisations.ng-leave {
-    animation: slideOutUp 0.5s both ease-in;
-}
-
-.realisation-item.ng-enter {
-  -webkit-transition: 0.4s ease-in all;
-  transition: 0.4s ease-in all;
-  opacity:0;
-  -webkit-transform:scale(0);
-  transform:scale(0);
-}
-.realisation-item.ng-enter-stagger {
-  transition-delay: 0.4s;
-  transition-duration: 0s;
-}
-.realisation-item.ng-enter.ng-enter-active {
-  opacity:1;
-  -webkit-transform:scale(1);
-  transform:scale(1);
-}
-
-/* contact ---------------------- */
-.page-contact.ng-enter {
-    -webkit-animation-delay: 0.4s;
-    animation: slideInUp 0.5s both ease-in; 
-    animation-delay: 0.4s;
-}
-.page-contact.ng-leave { 
-    animation: slideOutUp 0.5s both ease-in; 
+.btn.footer-nav .fa {
+    display: block;
 }
 
 /*------------------------------------------------------------------------------*/
+
+/* Page Style */
+
+.page-title {
+    margin-top: 4em;
+    font-size: 3em;
+}
+
+a {
+    color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+    .page-title {
+        margin-top: 125px;
+        font-size: 2.5em;
+        line-height: 1.2em;
+    }
+}
 
 /* Home page */
 @media screen and (max-width: 720px) {
@@ -365,6 +275,11 @@ header nav a {
 .form-control {
     margin-left: 10px;
 }
+@media screen and (max-width: 720px) {
+    .form-control {
+        margin-left: 0;
+    }
+}
 
 .form-horizontal .form-group {
     margin-right: 0;
@@ -374,4 +289,124 @@ header nav a {
 .row {
     margin-right: 0;
     margin-left: 0;
+}
+
+/* page specific animations ------------------------ */
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform: translateY(150%); }
+    to      { transform: translateY(0); }
+}
+@keyframes slideOutUp {
+    from    { transform: translateY(0); }
+    to      { transform: translateY(-100%); }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.page {
+    bottom:0; 
+    position:absolute; 
+    text-align:center;
+    top:0;  
+    width:100%;
+    height: 100%;
+}
+.page.ng-enter {
+    z-index: 9999;
+}
+.page.ng-leave {
+    z-index: 8888;
+}
+
+/* home -------------------------- */
+.page-home.ng-enter {
+    animation: slideInUp 0.5s both ease-in;
+}
+.page-home.ng-leave {
+    animation: slideOutUp 0.5s both ease-in;
+}
+
+@media screen and (max-width: 720px) {
+    .page-home.ng-enter {
+        animation: fadeIn 0.5s both ease-in;
+    }
+    .page-home.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+    }
+}
+
+.home-item.ng-enter {
+  -webkit-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  opacity:0;
+  -webkit-transform:scale(0);
+  transform:scale(0);
+}
+.home-item.ng-enter-stagger {
+  transition-delay: 0.5s;
+  transition-duration: 0s;
+}
+.home-item.ng-enter.ng-enter-active {
+  opacity:1;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+
+/* realisations ------------------------ */
+.page-realisations.ng-enter {
+    animation: slideInUp 0.5s both ease-in;
+}
+.page-realisations.ng-leave {
+    animation: slideOutUp 0.5s both ease-in;
+}
+@media screen and (max-width: 720px) {
+    .page-realisations.ng-enter {
+        animation: fadeIn 0.5s both ease-in;
+    }
+    .page-realisations.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+    }
+}
+
+.realisation-item.ng-enter {
+  -webkit-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  opacity:0;
+  -webkit-transform:scale(0);
+  transform:scale(0);
+}
+.realisation-item.ng-enter-stagger {
+  transition-delay: 0.4s;
+  transition-duration: 0s;
+}
+.realisation-item.ng-enter.ng-enter-active {
+  opacity:1;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+
+/* contact ---------------------- */
+.page-contact.ng-enter {
+    -webkit-animation-delay: 0.4s;
+    animation: slideInUp 0.5s both ease-in; 
+    animation-delay: 0.4s;
+}
+.page-contact.ng-leave { 
+    animation: slideOutUp 0.5s both ease-in; 
+}
+@media screen and (max-width: 720px) {
+    .page-contact.ng-enter {
+        animation: fadeIn 0.5s both ease-in;
+    }
+    .page-contact.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+    }
 }
