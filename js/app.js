@@ -7,11 +7,6 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'Page1Ctrl',
             controllerAs: 'bienvenue'
         })
-        .when('/bienvenue', {
-            templateUrl: 'views/view_page1.html',
-            controller: 'Page1Ctrl',
-            controllerAs: 'bienvenue'
-        })
         .when('/realisations', {
             templateUrl: 'views/view_page2.html',
             controller: 'Page2Ctrl',
@@ -27,6 +22,31 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'PageRealisationsCtrl',
             controllerAs: 'realisations/open-joist-triforce'
         })
+        .when('/realisations/physioextra', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/physioextra'
+        })
+        .when('/realisations/irriglobe', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/irriglobe'
+        })
+        .when('/realisations/feu-vert', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/feu-vert'
+        })
+        .when('/realisations/courriel-physioextra', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/courriel-physioextra'
+        })
+        .when('/realisations/artfotovision', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/artfotovision'
+        })
 
         .when('/engagez-moi', {
             templateUrl: 'views/view_page3.html',
@@ -41,6 +61,6 @@ app.config(['$routeProvider', function($routeProvider) {
 //Setting HTML5 Location Mode
 app.config(['$locationProvider',
     function($locationProvider) {
-        $locationProvider.hashPrefix("!");
+        $locationProvider.html5Mode(true);
     }
 ]);

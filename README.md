@@ -1,4 +1,9 @@
-Mathieu Forest personnal website. I use the project below as a base to build my website.
+My personnal website. I use the project below as a base to build my website.
+
+Start Server by typing this command:
+
+python StartHTTPServer.py
+
 
 -------------------------
 
