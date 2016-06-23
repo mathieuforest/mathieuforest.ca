@@ -16,5 +16,9 @@ app.controller('Page2Ctrl', ['$scope', function($scope) {
         {name: 'Courriel Physio-Extra', imagePath: 'img/realisations/courriel-physioextra.gif', url:'realisations/courriel-physioextra'},
         {name: 'Artfotovision', imagePath: 'img/realisations/artfotovision.jpg', url:'realisations/artfotovision'}
     ];
+
+    $scope.$on("$routeChangeSuccess", function(){
+     window.scrollTo(0,0);
+    });
 	
 }]);

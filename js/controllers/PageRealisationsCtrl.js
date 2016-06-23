@@ -53,4 +53,8 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
       };
     }
 
+    $scope.$on("$routeChangeSuccess", function(){
+      window.scrollTo(0,0);
+    });
+
 }]);

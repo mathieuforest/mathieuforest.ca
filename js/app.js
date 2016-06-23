@@ -1,4 +1,4 @@
-var app = angular.module('website', ['ngRoute', 'ngAnimate']);
+var app = angular.module('website', ['ngRoute', 'ngAnimate', 'ajoslin.promise-tracker']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
