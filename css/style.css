@@ -271,25 +271,7 @@ a {
     }
 }
 
-/* Page contact */
-.form-control {
-    margin-left: 10px;
-}
-@media screen and (max-width: 720px) {
-    .form-control {
-        margin-left: 0;
-    }
-}
 
-.form-horizontal .form-group {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.row {
-    margin-right: 0;
-    margin-left: 0;
-}
 
 /* page specific animations ------------------------ */
 
@@ -328,10 +310,10 @@ a {
 
 /* home -------------------------- */
 .page-home.ng-enter {
-    animation: slideInUp 0.5s both ease-in;
+    animation: fadeIn 0.5s both ease-in;
 }
 .page-home.ng-leave {
-    animation: slideOutUp 0.5s both ease-in;
+    animation: fadeOut 0.5s both ease-in;
 }
 
 @media screen and (max-width: 720px) {
@@ -362,10 +344,10 @@ a {
 
 /* realisations ------------------------ */
 .page-realisations.ng-enter {
-    animation: slideInUp 0.5s both ease-in;
+    animation: fadeIn 0.5s both ease-in;
 }
 .page-realisations.ng-leave {
-    animation: slideOutUp 0.5s both ease-in;
+    animation: fadeOut 0.5s both ease-in;
 }
 @media screen and (max-width: 720px) {
     .page-realisations.ng-enter {
@@ -395,12 +377,10 @@ a {
 
 /* contact ---------------------- */
 .page-contact.ng-enter {
-    -webkit-animation-delay: 0.4s;
-    animation: slideInUp 0.5s both ease-in; 
-    animation-delay: 0.4s;
+    animation: fadeIn 0.5s both ease-in; 
 }
 .page-contact.ng-leave { 
-    animation: slideOutUp 0.5s both ease-in; 
+    animation: fadeOut 0.5s both ease-in; 
 }
 @media screen and (max-width: 720px) {
     .page-contact.ng-enter {

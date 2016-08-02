@@ -13,37 +13,42 @@
         <br>
         <div class="col-md-offset-4 col-md-4">
             <div class="row">
-                <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
-                <div data-ng-show="progress.active()" style="color: red; font-size: 50px;">Envoi&hellip;</div>
-                <form name="form" novalidate role="form">
-                  <div class="form-group">
-                    <label for="name">Votre nom</label>
-                    <span class="label label-danger" data-ng-show="submitted && form.name.$error.required">Requis</span>
-                    <input type="text" name="name" data-ng-model="name" class="form-control" required />
-                  </div>
+                <!-- SHOW ERROR/SUCCESS MESSAGES --> 
+                <div id="messages" ng-show="message">{{ message }}</div>
 
-                  <div class="form-group">
-                    <label for="email">Votre adresse courriel</label>
-                    <span class="label label-danger" data-ng-show="submitted && form.email.$error.required">Requis</span>
-                    <span class="label label-danger" data-ng-show="submitted && form.$error.email">Invalid email!</span>
-                    <input type="email" name="email" data-ng-model="email" class="form-control" required />  
-                  </div>
+                <!-- FORM --> 
+                <form ng-submit="processForm()"> 
 
-                  <div class="form-group">
-                    <label for="subjectList">Sujet</label>
-                    <span class="label label-danger" data-ng-show="submitted && form.subjectList.$error.required">Requis</span>
-                    <input type="text" name="subject" data-ng-model="subject" class="form-control" required>
-                    </select>
-                  </div>
+                    <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }"> 
+                        <label>Nom</label> 
+                        <input type="text" name="name" class="form-control" placeholder="Nom" ng-model="formData.name"> 
+                        <span class="help-block" ng-show="errorName">{{ errorName }}</span> 
+                    </div>
 
-                  <div class="form-group">
-                    <label for="comments">Message</label>
-                    <span class="label label-danger" data-ng-show="submitted && form.comments.$error.required">Requis</span>
-                    <textarea name="comments" data-ng-model="comments" class="form-control" required></textarea>
-                  </div>
+                    <div id="email-group" class="form-group" ng-class="{ 'has-error' : errorEmail }"> 
+                        <label>Courriel</label> 
+                        <input type="text" name="email" class="form-control" placeholder="Courriel" ng-model="formData.email"> 
+                        <span class="help-block" ng-show="errorEmail">{{ errorEmail }}</span> 
+                    </div>
 
-                  <button data-ng-disabled="progress.active()" data-ng-click="submit(form)" class="btn btn-default">Envoyer</button>
+                    <div id="subject-group" class="form-group" ng-class="{ 'has-error' : errorSubject }"> 
+                        <label>Sujet</label> 
+                        <input type="text" name="subject" class="form-control" placeholder="Sujet" ng-model="formData.subject"> 
+                        <span class="help-block" ng-show="errorSubject">{{ errorSubject }}</span> 
+                    </div>
+
+                    <div id="message-group" class="form-group" ng-class="{ 'has-error' : errorMessage }"> 
+                        <label>Message</label> 
+                        <textarea name="message" rows="10" cols="20" class="form-control" placeholder="Message" ng-model="formData.message"></textarea>
+                        <span class="help-block" ng-show="errorMessage">{{ errorMessage }}</span> 
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-lg btn-block">
+                        <span class="glyphicon glyphicon-flash"></span> Soumettre!
+                    </button>
+
                 </form>
+
             </div>
         </div>
         <div class="clearfix"></div>

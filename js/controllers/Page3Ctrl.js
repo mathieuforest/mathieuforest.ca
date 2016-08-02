@@ -1,67 +1,38 @@
-app.controller('Page3Ctrl', ['$scope', '$http', '$timeout', 'promiseTracker', function($scope, $http, $timeout, promiseTracker) {
+app.controller('Page3Ctrl', ['$scope', '$http', '$httpParamSerializerJQLike', function($scope, $http, $httpParamSerializerJQLike) {
     $scope.text = {
         'title': 'Engagez-moi',
         'desc': 'Contactez-moi pour discuter vos projets.'
     },
     $scope.pageClass = 'page-contact';
 
-    // Inititate the promise tracker to track form submissions.
-    $scope.progress = promiseTracker();
+    $scope.formData = {};
+    
+    $scope.processForm = function() {
+      $http({
+        method  : 'POST',
+        url     : 'process.php',
+        data    : $httpParamSerializerJQLike($scope.formData),  // pass in data as strings
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+     }).success(function(data) {
+      
+      console.log(data);
 
-    // Form submit handler.
-    $scope.submit = function(form) {
-      // Trigger validation flag.
-      $scope.submitted = true;
-
-      // If form is invalid, return and let AngularJS show validation errors.
-      if (form.$invalid) {
-        return;
+      if (!data.success) {
+        // if not successful, bind errors to error variables
+        console.log(data.errors);
+        $scope.errorName = data.errors.name;
+        $scope.errorEmail = data.errors.email;
+        $scope.errorSubject = data.errors.subject;
+        $scope.errorMessage = data.errors.message;
+      } else {
+        // if successful, bind success message to message
+        $scope.message = data.message;
       }
-
-      // Default values for the request.
-      var config = {
-        params : {
-          'callback' : 'JSON_CALLBACK',
-          'name' : $scope.name,
-          'email' : $scope.email,
-          'subject' : $scope.subject,
-          'comments' : $scope.comments
-        },
-      };
-
-      // Perform JSONP request.
-      var $promise = $http.jsonp('response.json', config)
-        .success(function(data, status, headers, config) {
-          if (data.status == 'OK') {
-            $scope.name = null;
-            $scope.email = null;
-            $scope.subject = null;
-            $scope.comments = null;
-            $scope.messages = 'Votre message a été envoyé!';
-            $scope.submitted = false;
-          } else {
-            $scope.messages = 'Oops , nous avons reçu votre demande , mais il y avait une erreur.';
-            $log.error(data);
-          }
-        })
-        .error(function(data, status, headers, config) {
-          $scope.progress = data;
-          $scope.messages = 'Il y a une erreur de réseau. Réessayez plus tard.';
-          $log.error(data);
-        })
-        .finally(function() {
-          // Hide status messages after three seconds.
-          $timeout(function() {
-            $scope.messages = null;
-          }, 3000);
-        });
-
-      // Track the request and show its progress to the user.
-      $scope.progress.addPromise($promise);
-    };
-
-    $scope.$on("$routeChangeSuccess", function(){
-        window.scrollTo(0,0);
     });
+  };
+
+  $scope.$on("$routeChangeSuccess", function(){ 
+      window.scrollTo(0,0);
+  });
 
 }]);
