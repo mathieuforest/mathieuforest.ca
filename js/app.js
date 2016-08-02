@@ -1,4 +1,4 @@
-var app = angular.module('website', ['ngRoute', 'ngAnimate', 'ajoslin.promise-tracker']);
+var app = angular.module('website', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -53,14 +53,13 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'Page3Ctrl',
             controllerAs: 'engagez-moi'
         })
+        
         .otherwise({
             redirectTo: '/'
         });
 }]);
 
 //Setting HTML5 Location Mode
-app.config(['$locationProvider',
-    function($locationProvider) {
-        $locationProvider.html5Mode(true);
-    }
-]);
+app.config([ '$locationProvider', function($locationProvider) {
+    $locationProvider.html5Mode(true);
+}]);

@@ -1,4 +1,4 @@
-angular.module('website').directive('animateOnLoad',['$animateCss', function($animateCss) {
+app.directive('animateOnLoad',['$animateCss', function($animateCss) {
   return {
     'link': function(scope, element) {
       $animateCss(element, {
@@ -8,3 +8,20 @@ angular.module('website').directive('animateOnLoad',['$animateCss', function($an
     }
   };
 }]);
+
+app.animation('.ng-enter', function () {
+  	return {
+	    enter: function() {
+	    	var scrollStep = -window.scrollY / (400 / 15),
+		        scrollInterval = setInterval(function(){
+		        if ( window.scrollY != 0 ) {
+		            window.scrollBy( 0, scrollStep );
+		        }
+		        else clearInterval(scrollInterval); 
+		    },15);
+		}
+	};
+});
+
+
+

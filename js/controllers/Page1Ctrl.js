@@ -16,9 +16,4 @@ app.controller('Page1Ctrl', ['$scope', function($scope) {
         {className: "fa fa-git fa-5x", url: "https://github.com/mathieuforest", linkTitle: "GitHub"}
     ];
 
-    $scope.$on("$routeChangeSuccess", function(){
-     window.scrollTo(0,0);
-    });
-
-
 }]);

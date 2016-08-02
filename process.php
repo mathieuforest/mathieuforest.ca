@@ -6,23 +6,20 @@ if($_POST) {
 
 	// validate the variables ========
 	if (empty($_POST['name'])) {
-	  $errors['name'] = 'Name is required.';
+	  $errors['name'] = 'Le nom est requis.';
 	} else if (empty($_POST['email'])) {
-	  $errors['email'] = 'Email is required.';
+	  $errors['email'] = 'Le courriel est requis.';
 	} else if (empty($_POST['subject'])) {
-	  $errors['subject'] = 'Subject is required.';
+	  $errors['subject'] = 'Le sujet est requis.';
 	} else if (empty($_POST['message'])) {
-	  $errors['message'] = 'Message is required.';
+	  $errors['message'] = 'Le message est requis.';
 	}
 
-	echo "test";
-	echo json_encode($errors);
 	// response if there are errors
-	if (!empty($errors)) {
+	if ( !empty($errors) ) {
 		// if there are items in our errors array, return those errors
 		$data['success'] = false;
 		$data['errors']  = $errors;
-		echo json_encode($errors);
 	} else {
 		// if there are no errors, return a message
 	    $name = trim($_POST['name']);
@@ -36,11 +33,8 @@ if($_POST) {
 
 	    mail($to, $subject, $message, $headers);
 		$data['success'] = true;
-        $data['message'] = "Your mail has been sent succesfully!";
+        $data['message'] = "Votre message est envoyé";
 	}
-
-	echo "test";
-	echo json_encode($errors);
 
 	// return all our data to an AJAX call
 	echo json_encode($data);

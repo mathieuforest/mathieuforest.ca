@@ -187,31 +187,48 @@ header nav a {
 }
 
 /* Footer nav */
-.btn.footer-nav {
+.btn.footer-nav{
     font-size: 1.2em;
+    background: #fff;
+    color: #2098d1;
+    margin-bottom: 50px;
 }
 .btn.footer-nav .fa {
     display: block;
 }
 
+.btn.footer-nav:hover, .btn.footer-nav:focus {
+    background: #23527c;
+    color: #fff;
+}
+
 /*------------------------------------------------------------------------------*/
 
 /* Page Style */
-
-.page-title {
-    margin-top: 4em;
-    font-size: 3em;
+.container {
+    padding-top: 200px;
+}
+@media screen and (max-width: 720px) {
+    .container {
+        padding-top: 100px;
+    }
 }
 
 a {
     color: #fff;
 }
 
+.page-title {
+    font-size: 3em;
+}
+#page_realisations .page-title {
+    font-size: 2em;
+}
 @media screen and (max-width: 720px) {
     .page-title {
-        margin-top: 125px;
         font-size: 2.5em;
         line-height: 1.2em;
+        margin: 10px 0;
     }
 }
 
@@ -389,4 +406,8 @@ a {
     .page-contact.ng-leave {
         animation: fadeOut 0.5s both ease-in;
     }
+}
+
+.page-contact .contact-form.sent {
+    animation: fadeOut 0.5s both ease-in;
 }

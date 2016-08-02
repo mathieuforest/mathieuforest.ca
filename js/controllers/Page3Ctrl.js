@@ -13,10 +13,8 @@ app.controller('Page3Ctrl', ['$scope', '$http', '$httpParamSerializerJQLike', fu
         url     : 'process.php',
         data    : $httpParamSerializerJQLike($scope.formData),  // pass in data as strings
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
-     }).success(function(data) {
+      }).success(function(data) {
       
-      console.log(data);
-
       if (!data.success) {
         // if not successful, bind errors to error variables
         console.log(data.errors);
@@ -27,12 +25,14 @@ app.controller('Page3Ctrl', ['$scope', '$http', '$httpParamSerializerJQLike', fu
       } else {
         // if successful, bind success message to message
         $scope.message = data.message;
+        $scope.formData.name = '';
+        $scope.formData.email = '';
+        $scope.formData.subject = '';
+        $scope.formData.message = '';
+        var myContactForm = angular.element( document.querySelector( '.contact-form' ) );
+        myContactForm.addClass('sent');
       }
     });
   };
-
-  $scope.$on("$routeChangeSuccess", function(){ 
-      window.scrollTo(0,0);
-  });
 
 }]);
