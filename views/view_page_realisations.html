@@ -8,13 +8,24 @@
             <br>
             <br>
             <p class="page-data">{{info.desc}}</p>
+            <br>
+            <h3>Technologies</h3>
+            <br>
+            <div class="tech">
+                <div class="tech-item" ng-repeat="item in info.tech" animate-on-load>
+                    <a target="_blank" href="{{item.techLink}}" title="{{item.techName}}">{{item.techName}}</a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <a class="btn footer-nav" href="{{info.url}}" title="{{info.linkText}}">{{info.linkText}}</a>
         </div>
     </div>
     <br>
     <br>
     <div class="row">
         <div class="col-md-12">
-            <a class="btn footer-nav" href="realisations">Mes realisations <i class="fa fa-angle-down"></i></a>
+            <a class="btn footer-nav" href="realisations">Mes realisations <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </div>

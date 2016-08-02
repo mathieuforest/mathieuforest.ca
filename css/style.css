@@ -346,8 +346,6 @@ a {
   -webkit-transition: 0.4s ease-in all;
   transition: 0.4s ease-in all;
   opacity:0;
-  -webkit-transform:scale(0);
-  transform:scale(0);
 }
 .home-item.ng-enter-stagger {
   transition-delay: 0.5s;
@@ -355,8 +353,6 @@ a {
 }
 .home-item.ng-enter.ng-enter-active {
   opacity:1;
-  -webkit-transform:scale(1);
-  transform:scale(1);
 }
 
 /* realisations ------------------------ */
@@ -379,8 +375,6 @@ a {
   -webkit-transition: 0.4s ease-in all;
   transition: 0.4s ease-in all;
   opacity:0;
-  -webkit-transform:scale(0);
-  transform:scale(0);
 }
 .realisation-item.ng-enter-stagger {
   transition-delay: 0.4s;
@@ -388,8 +382,6 @@ a {
 }
 .realisation-item.ng-enter.ng-enter-active {
   opacity:1;
-  -webkit-transform:scale(1);
-  transform:scale(1);
 }
 
 /* contact ---------------------- */
