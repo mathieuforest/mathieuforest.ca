@@ -13,7 +13,6 @@
     <meta name="description" content="Développeur Front-End à Montréal. Je vous présente quelques unes de mes réalisations.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.ico">
-    <base href="/mathieuforest/">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900|Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
@@ -30,6 +29,7 @@
     </style>
     <link rel="stylesheet" href="css/style.css">
     <script src="libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <base href="/">
 </head>
 
 <body ng-app="website">
@@ -51,7 +51,7 @@
         </nav>
     </header>
     <section>
-        <div class="page ng-enter {{ pageClass }} ng-view"></div>
+        <div class="page ng-enter {{ pageClass }} ng-view" autoscroll=""></div>
     </section>
     <footer>
     </footer>
@@ -60,6 +60,7 @@
     <script src="https://code.angularjs.org/1.4.4/angular.js"></script>
     <script src="https://code.angularjs.org/1.4.4/angular-animate.js"></script>
     <script src="libs/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/modules/promise-tracker.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- App.js -->
     <script src="js/app.js"></script>

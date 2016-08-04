@@ -24,7 +24,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "PhysioExtra",
         "desc": "Développement Frontend et backend pour la refonte du site web de l'entreprise.",
-        "tech":[{techName: "Wordpress", techLink: "https://fr.wordpress.com/"},
+        "tech":[{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}],
         "imagePath": "img/realisations/physioextra.jpg",
         "linkText": "",
         "url": ""
