@@ -5,64 +5,64 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
   if ( $location.$$path == "/realisations/barrette-structural" ) {
     $scope.info = {
         "title": "Barrette Structural",
-        "desc": "Développement Frontend et backend pour la refonte du site web de l'entreprise.",
+        "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
         "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/barrette-structural.jpg",
         "linkText": "Voir le site web",
-        "url": "http://google.com barrette structural"
+        "url": "http://www.google.com/search?q=barrette+structural"
     };
   } else if ( $location.$$path == "/realisations/open-joist-triforce" ) {
     $scope.info = {
         "title": "Open Joist Triforce",
-        "desc": "Développement Frontend et backend pour la refonte du site web de l'entreprise.",
+        "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
         "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/open-joist-triforce.jpg",
         "linkText": "Voir le site web",
-        "url": "http://google.com"
+        "url": "http://www.google.com/search?q=Open+Joist+Triforce"
     };
   } else if ( $location.$$path == "/realisations/physioextra" ) {
     $scope.info = {
         "title": "PhysioExtra",
-        "desc": "Développement Frontend et backend pour la refonte du site web de l'entreprise.",
-        "tech":[{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}],
+        "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
+        "tech":[{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/physioextra.jpg",
-        "linkText": "",
-        "url": ""
+        "linkText": "Voir le site web",
+        "url": "http://www.google.com/search?q=PhysioExtra"
     };
   } else if ( $location.$$path == "/realisations/irriglobe" ) {
     $scope.info = {
         "title": "Irriglobe",
-        "desc": "",
-        "tech":"",
+        "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
+        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}],
         "imagePath": "img/realisations/irriglobe.jpg",
-        "linkText": "",
+        "linkText": "Voir le site web",
         "url": "http://irriglobe.com"
     };
   } else if ( $location.$$path == "/realisations/feu-vert" ) {
     $scope.info = {
         "title": "Feu-vert",
-        "desc": "",
-        "tech":"",
+        "desc": "Développement Frontend du site web de l'entreprise.",
+        "tech": [{techName: "Drupal 7", techLink: "https://www.drupal.org/"}],
         "imagePath": "img/realisations/feu-vert.jpg",
-        "linkText": "",
+        "linkText": "Voir le site web",
         "url": "http://feuvert.ca"
     };
   } else if ( $location.$$path == "/realisations/courriel-physioextra" ) {
     $scope.info = {
         "title": "Courriel Physioextra",
-        "desc": "",
-        "tech":"",
+        "desc": "Développement du gabarit de l'infolettre de l'entreprise.",
+        "tech": [{techName: "HTML"}, {techName: "CSS"}],
         "imagePath": "img/realisations/courriel-physioextra.gif",
-        "linkText": "",
-        "url": ""
+        "linkText": "Voir le site web",
+        "url": "http://www.google.com/search?q=PhysioExtra"
     };
   } else if ( $location.$$path == "/realisations/artfotovision" ) {
     $scope.info = {
         "title": "Artfotovision",
-        "desc": "",
-        "tech":"",
+        "desc": "Développement du site web de l'entreprise.",
+        "tech": [{techName: "Drupal 7", techLink: "https://www.drupal.org/"}],
         "imagePath": "img/realisations/artfotovision.jpg",
-        "linkText": "",
+        "linkText": "Voir le site web",
         "url": "http://artfotovision.com/"
     };
   }

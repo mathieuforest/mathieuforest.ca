@@ -384,6 +384,21 @@ a {
   opacity:1;
 }
 
+
+/* Realisation description */
+.tech-item.ng-enter {
+  -webkit-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  opacity:0;
+}
+.tech-item.ng-enter-stagger {
+  transition-delay: 0.5s;
+  transition-duration: 0s;
+}
+.tech-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
 /* contact ---------------------- */
 .page-contact.ng-enter {
     animation: fadeIn 0.5s both ease-in; 
