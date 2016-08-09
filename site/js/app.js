@@ -12,6 +12,16 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'Page2Ctrl',
             controllerAs: 'realisations'
         })
+        .when('/realisations/thyme-maternite', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/thyme-maternite'
+        })
+        .when('/realisations/exob2b', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/exob2b'
+        })
         .when('/realisations/barrette-structural', {
             templateUrl: 'views/view_page_realisations.html',
             controller: 'PageRealisationsCtrl',

@@ -2,7 +2,25 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
 
   $scope.pageClass = "page-realisations";
 
-  if ( $location.$$path == "/realisations/barrette-structural" ) {
+  if ( $location.$$path == "/realisations/thyme-maternite" ) {
+    $scope.info = {
+        "title": "Thyme Maternité",
+        "desc": "Développement Frontend et mise-à-jour du site web de la bannière.",
+        "tech": [{techName: "Demandware", techLink: "http://www.demandware.com/"}, {techName: "HTML"}, {techName: "SASS"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Grid960", techLink: "http://960.gs/"}],
+        "imagePath": "img/realisations/thyme-maternity.jpg",
+        "linkText": "Voir le site web",
+        "url": "http://www.thymematernity.com"
+    };
+  } else if ( $location.$$path == "/realisations/exob2b" ) {
+    $scope.info = {
+        "title": "Exo B2B",
+        "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
+        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
+        "imagePath": "img/realisations/exob2b.jpg",
+        "linkText": "Voir le site web",
+        "url": "http://www.google.com/search?q=ExoB2B"
+    };
+  } else if ( $location.$$path == "/realisations/barrette-structural" ) {
     $scope.info = {
         "title": "Barrette Structural",
         "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
@@ -33,7 +51,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "Irriglobe",
         "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
-        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}],
+        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Grid960", techLink: "http://960.gs/"}],
         "imagePath": "img/realisations/irriglobe.jpg",
         "linkText": "Voir le site web",
         "url": "http://irriglobe.com"

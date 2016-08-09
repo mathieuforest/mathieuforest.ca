@@ -8,6 +8,8 @@ app.controller('Page2Ctrl', ['$scope', function($scope) {
     $scope.pageClass = 'page-realisations';
 
     $scope.items = [
+        {name: 'Thyme Maternité', imagePath: 'img/realisations/thyme-maternity.jpg', url:'realisations/thyme-maternite'},
+        {name: 'ExoB2B', imagePath: 'img/realisations/exob2b.jpg', url:'realisations/exob2b'},
         {name: 'Barrette Structural', imagePath: 'img/realisations/barrette-structural.jpg', url:'realisations/barrette-structural'},
         {name: 'Open Joist Triforce', imagePath: 'img/realisations/open-joist-triforce.jpg', url:'realisations/open-joist-triforce'},
         {name: 'PhysioExtra', imagePath: 'img/realisations/physioextra.jpg', url:'realisations/physioextra'},
