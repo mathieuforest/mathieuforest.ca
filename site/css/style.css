@@ -38,6 +38,13 @@ h1, .h1, h2, .h2, h3, .h3 {
 /*------------------------------------------------------------------------------*/
 
 
+@media (max-width: 480px) { 
+    .page {
+        padding: 0 10px;
+    }
+}
+
+
 /* Header Style */
 
 header {
@@ -62,10 +69,6 @@ header > div h1 {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
-}
-
-header > div {
-    height: 100%;
 }
 
 header > div:before {
@@ -105,6 +108,10 @@ header nav a {
 }
 
 @media only screen and (min-width: 721px) {
+
+    header nav {
+        min-width: 365px;
+    }
 
     header nav a {
         position: relative;
@@ -154,6 +161,9 @@ header nav a {
         -ms-transition-property: background;
         -o-transition-property: background;
         transition-property: background;
+    }
+    header nav a.hired:before {
+        content: inherit;
     }
     header nav .hired:focus, header nav .hired:hover {
         color: #fff;

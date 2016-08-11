@@ -1,7 +1,7 @@
 app.controller('Page3Ctrl', ['$scope', '$http', '$httpParamSerializerJQLike', function($scope, $http, $httpParamSerializerJQLike) {
     $scope.text = {
-        'title': 'Engagez-moi',
-        'desc': 'Contactez-moi pour discuter vos projets.'
+        'title': 'Engagez moi',
+        'desc': 'Contactez-moi pour discuter de vos projets.'
     },
     $scope.pageClass = 'page-contact';
 

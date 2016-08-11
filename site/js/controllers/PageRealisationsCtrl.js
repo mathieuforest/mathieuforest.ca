@@ -6,7 +6,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "Thyme Maternité",
         "desc": "Développement Frontend et mise-à-jour du site web de la bannière.",
-        "tech": [{techName: "Demandware", techLink: "http://www.demandware.com/"}, {techName: "HTML"}, {techName: "SASS"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Grid960", techLink: "http://960.gs/"}],
+        "tech": [{techName: "Demandware", techLink: "http://www.demandware.com/"}, {techName: "HTML"}, {techName: "SASS"}, {techName: "Bootstrap", techLink: "http://getbootstrap.com/"}, {techName: "Grid960", techLink: "http://960.gs/"}],
         "imagePath": "img/realisations/thyme-maternity.jpg",
         "linkText": "Voir le site web",
         "url": "http://www.thymematernity.com"
@@ -15,7 +15,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "Exo B2B",
         "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
-        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
+        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Bootstrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisées", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/exob2b.jpg",
         "linkText": "Voir le site web",
         "url": "http://www.google.com/search?q=ExoB2B"
@@ -24,7 +24,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "Barrette Structural",
         "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
-        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
+        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Bootstrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisées", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/barrette-structural.jpg",
         "linkText": "Voir le site web",
         "url": "http://www.google.com/search?q=barrette+structural"
@@ -33,7 +33,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "Open Joist Triforce",
         "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
-        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Boostrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
+        "tech": [{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Bootstrap", techLink: "http://getbootstrap.com/"}, {techName: "Extensions Wordress personnalisées", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/open-joist-triforce.jpg",
         "linkText": "Voir le site web",
         "url": "http://www.google.com/search?q=Open+Joist+Triforce"
@@ -42,7 +42,7 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
     $scope.info = {
         "title": "PhysioExtra",
         "desc": "Développement Frontend et Backend pour la refonte du site web de l'entreprise.",
-        "tech":[{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Extensions Wordress personnalisée", techLink: "https://github.com/mathieuforest/"}],
+        "tech":[{techName: "Wordpress", techLink: "https://fr.wordpress.com/"}, {techName: "Extensions Wordress personnalisées", techLink: "https://github.com/mathieuforest/"}],
         "imagePath": "img/realisations/physioextra.jpg",
         "linkText": "Voir le site web",
         "url": "http://www.google.com/search?q=PhysioExtra"

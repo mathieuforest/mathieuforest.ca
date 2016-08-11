@@ -3,7 +3,7 @@ app.controller('Page1Ctrl', ['$scope', function($scope) {
     $scope.text = {
         'title': 'Développement Front-End',
         'desc': 'HTML - CSS - JavaScript - CMS - Optimisation',
-        'intro': 'Cherchant toujours à innover, j’adore développer et concevoir des outils de communications Web et numérique. Je reste toujours à l’affût de tout ce qui est à la fine pointe afin d’améliorer mes habiletés d’intégration. Mon but premier est de fournir la meilleure expérience en matière de UI et UX tout en respectant les standards en matière de protocole Web.'
+        'intro': 'Cherchant toujours à innover, j’adore développer et concevoir des outils de communications Web et numérique. Je reste toujours à l’affût de tout ce qui est à la fine pointe afin d’améliorer mes habiletés. Mon but premier est de fournir la meilleure expérience en matière de UI et UX tout en respectant les standards en matière de protocole Web.'
     };
 
     $scope.pageClass = 'page-home';

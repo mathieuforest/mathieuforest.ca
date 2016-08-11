@@ -33,7 +33,7 @@ if($_POST) {
 
 	    mail($to, $subject, $message, $headers);
 		$data['success'] = true;
-        $data['message'] = "Votre message est envoyé";
+        $data['message'] = "Votre message a été envoyé.";
 	}
 
 	// return all our data to an AJAX call
