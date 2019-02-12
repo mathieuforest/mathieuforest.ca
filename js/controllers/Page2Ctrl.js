@@ -8,6 +8,7 @@ app.controller('Page2Ctrl', ['$scope', function($scope) {
     $scope.pageClass = 'page-realisations';
 
     $scope.items = [
+        {name: 'Altitude-Sports', imagePath: 'img/realisations/altitude-sports.jpg', url:'realisations/altitude-sports'},
         {name: 'Thyme Maternité', imagePath: 'img/realisations/thyme-maternity.jpg', url:'realisations/thyme-maternite'},
         {name: 'ExoB2B', imagePath: 'img/realisations/exob2b.jpg', url:'realisations/exob2b'},
         {name: 'Barrette Structural', imagePath: 'img/realisations/barrette-structural.jpg', url:'realisations/barrette-structural'},

@@ -12,6 +12,11 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'Page2Ctrl',
             controllerAs: 'realisations'
         })
+        .when('/realisations/altitude-sports', {
+            templateUrl: 'views/view_page_realisations.html',
+            controller: 'PageRealisationsCtrl',
+            controllerAs: 'realisations/altitude-sports'
+        })
         .when('/realisations/thyme-maternite', {
             templateUrl: 'views/view_page_realisations.html',
             controller: 'PageRealisationsCtrl',

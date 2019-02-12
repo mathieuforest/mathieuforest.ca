@@ -2,7 +2,16 @@ app.controller('PageRealisationsCtrl', ['$scope', '$route', '$routeParams', '$lo
 
   $scope.pageClass = "page-realisations";
 
-  if ( $location.$$path == "/realisations/thyme-maternite" ) {
+  if ( $location.$$path == "/realisations/altitude-sports" ) {
+    $scope.info = {
+        "title": "Altitude-Sports",
+        "desc": "Lead Développeur Front-End",
+        "tech": [{techName: "Javascript"}, {techName: "React"}, {techName: "Webpack"}, {techName: "NodeJS"},  {techName: "Jquery"}, {techName: "HTML"}, {techName: "SASS"}, {techName: "Bootstrap", techLink: "http://getbootstrap.com/"}, {techName: "Shopify"}],
+        "imagePath": "img/realisations/altitude-sports.jpg",
+        "linkText": "Voir le site web",
+        "url": "http://www.altitude-sports.com"
+    };
+  } else if ( $location.$$path == "/realisations/thyme-maternite" ) {
     $scope.info = {
         "title": "Thyme Maternité",
         "desc": "Développement Front-End et mise-à-jour du site web de la bannière.",
