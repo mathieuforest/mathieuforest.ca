@@ -428,3 +428,8 @@ a {
 .page-contact .contact-form.sent {
     animation: fadeOut 0.5s both ease-in;
 }
+
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
