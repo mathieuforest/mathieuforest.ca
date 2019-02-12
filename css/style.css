@@ -1,0 +1,430 @@
+/* Global Style */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    background: #2098d1;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------------------ */
+
+/* Reset */
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding: 0;
+}
+
+/*------------------------------------------------------------------------------*/
+
+
+@media (max-width: 480px) { 
+    .page {
+        padding: 0 10px;
+    }
+}
+
+
+/* Header Style */
+
+header {
+    text-align: justify;
+    text-transform: uppercase;
+    padding: 0 6%;
+    color: #fff;
+    z-index: 10000;
+    position: relative;
+}
+
+header:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+header > div,
+header > div:before,
+header nav,
+header > div h1 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+header > div:before {
+    content: '';
+    height: 100%;
+}
+
+header .logo {
+    margin-top: 10px;
+    width: 25%;
+    height: 25%;
+}
+
+header > div .name {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+    line-height: 1.4em;
+}
+
+header > div h1 {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+}
+
+header > div h2 {
+    font-size: 0.8em;
+    margin: 5px 0 0 0;
+}
+
+
+header nav a {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 721px) {
+
+    header nav {
+        min-width: 365px;
+    }
+
+    header nav a {
+        position: relative;
+        zoom: 1;
+        width: 100%;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    header nav a:focus:before, header nav a:hover:before {
+        left: 12px;
+        right: 12px;
+    }
+    header nav a:before {
+        color: white;
+        text-decoration: none;
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 5px;
+        height: 2px;
+        background: #045f8c;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -ms-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: left, right;
+        -moz-transition-property: left, right;
+        -ms-transition-property: left, right;
+        -o-transition-property: left, right;
+        transition-property: left, right;
+    }
+
+    header nav .hired {
+        background: #045f8c;
+        -webkit-transition-duration: .3s;
+        -moz-transition-duration: .3s;
+        -ms-transition-duration: .3s;
+        -o-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-property: background;
+        -moz-transition-property: background;
+        -ms-transition-property: background;
+        -o-transition-property: background;
+        transition-property: background;
+    }
+    header nav a.hired:before {
+        content: inherit;
+    }
+    header nav .hired:focus, header nav .hired:hover {
+        color: #fff;
+        background: #013a55;
+    }
+    header nav a.hired:before {
+        background: none;
+    }
+
+    header nav a:active,
+    header nav a:visited {
+        color: white;
+        text-decoration: none;
+    }
+}
+@media screen and (max-width: 720px) {
+    header {
+        height: auto;
+    }
+    header > div,
+    header > div h1,
+    header nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+    header nav {
+        display: none;
+    }
+}
+
+/* Footer nav */
+.btn.footer-nav{
+    font-size: 1.2em;
+    background: #fff;
+    color: #2098d1;
+    margin-bottom: 50px;
+}
+.btn.footer-nav .fa {
+    display: block;
+}
+
+.btn.footer-nav:hover, .btn.footer-nav:focus {
+    background: #23527c;
+    color: #fff;
+}
+
+/*------------------------------------------------------------------------------*/
+
+/* Page Style */
+.container {
+    padding-top: 200px;
+}
+@media screen and (max-width: 720px) {
+    .container {
+        padding-top: 100px;
+    }
+}
+
+a {
+    color: #fff;
+}
+
+.page-title {
+    font-size: 3em;
+}
+#page_realisations .page-title {
+    font-size: 2em;
+}
+@media screen and (max-width: 720px) {
+    .page-title {
+        font-size: 2.5em;
+        line-height: 1.2em;
+        margin: 10px 0;
+    }
+}
+
+/* Home page */
+@media screen and (max-width: 720px) {
+    .home-item {
+        display: inline-block;
+        float: none;
+    }
+}
+
+/* Realisation page */
+@media only screen and (min-width: 721px) {
+    .realisation-item {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+    .col-md-4:nth-child(3n+3)  {
+        margin-right: 0;
+    }
+}
+
+.realisation-item img {
+    width: 100%;
+}
+
+.realisation-item h3 {
+    margin: 0 10px;
+    display:block;
+    font-size:14px;
+    color:#fff;
+    text-align:center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    color: white;
+    line-height: 1.4;
+    background: rgba(4, 95, 140, 0.75);
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+.realisation-item:focus h3, .realisation-item:hover h3 {
+    zoom: 1;
+    filter: alpha(opacity=1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 720px) {
+    .realisation-item {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* page specific animations ------------------------ */
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform: translateY(150%); }
+    to      { transform: translateY(0); }
+}
+@keyframes slideOutUp {
+    from    { transform: translateY(0); }
+    to      { transform: translateY(-100%); }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.page {
+    bottom:0; 
+    position:absolute; 
+    text-align:center;
+    top:0;  
+    width:100%;
+    height: 100%;
+}
+.page.ng-enter {
+    z-index: 9999;
+}
+.page.ng-leave {
+    z-index: 8888;
+}
+
+/* home -------------------------- */
+.page-home.ng-enter {
+    animation: fadeIn 0.5s both ease-in;
+}
+.page-home.ng-leave {
+    animation: fadeOut 0.5s both ease-in;
+}
+
+@media screen and (max-width: 720px) {
+    .page-home.ng-enter {
+        animation: fadeIn 0.5s both ease-in;
+    }
+    .page-home.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+    }
+}
+
+.home-item.ng-enter {
+  -webkit-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  opacity:0;
+}
+.home-item.ng-enter-stagger {
+  transition-delay: 0.5s;
+  transition-duration: 0s;
+}
+.home-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/* realisations ------------------------ */
+.page-realisations.ng-enter {
+    animation: fadeIn 0.5s both ease-in;
+}
+.page-realisations.ng-leave {
+    animation: fadeOut 0.5s both ease-in;
+}
+@media screen and (max-width: 720px) {
+    .page-realisations.ng-enter {
+        animation: fadeIn 0.5s both ease-in;
+    }
+    .page-realisations.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+    }
+}
+
+.realisation-item.ng-enter {
+  -webkit-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  opacity:0;
+}
+.realisation-item.ng-enter-stagger {
+  transition-delay: 0.4s;
+  transition-duration: 0s;
+}
+.realisation-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+/* Realisation description */
+.tech-item.ng-enter {
+  -webkit-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  opacity:0;
+}
+.tech-item.ng-enter-stagger {
+  transition-delay: 0.5s;
+  transition-duration: 0s;
+}
+.tech-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/* contact ---------------------- */
+.page-contact.ng-enter {
+    animation: fadeIn 0.5s both ease-in; 
+}
+.page-contact.ng-leave { 
+    animation: fadeOut 0.5s both ease-in; 
+}
+@media screen and (max-width: 720px) {
+    .page-contact.ng-enter {
+        animation: fadeIn 0.5s both ease-in;
+    }
+    .page-contact.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+    }
+}
+
+.page-contact .contact-form.sent {
+    animation: fadeOut 0.5s both ease-in;
+}
