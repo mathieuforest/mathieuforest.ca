@@ -1,29 +1,31 @@
-<div id="page_1" class="container">
-    <div class="col-sm-12 col-md-12 text-center">
-        <div class="row">
-            <p class="page-title">{{text.title}}</p>
-            <div class="page-data">
+<div id="page_1" class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1 class="page-title">{{text.title}}</h1>
+            <p>
                 {{text.desc}}
-            </div>
+            </p>
         </div>
-        <br>
-        <br>
-        <div class="row"> 
-            <div class="col-sm-12 col-md-12 text-center justify-content-center">
-                <div class="home-item col-xs-4 col-sm-2 col-md-1" ng-repeat="item in items" animate-on-load>
-                    <a href="{{item.url}}" title="{{item.linkTitle}}"><i class="{{item.className}}"></i></a>
-                </div>
-            </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-md-center"> 
+        <div class="home-item col-6 col-md" ng-repeat="item in items" animate-on-load>
+            <a href="{{item.url}}" title="{{item.linkTitle}}"><i class="{{item.className}}"></i></a>
         </div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="page-intro col-md-offset-2 col-md-8">
-                {{text.intro}}
-            </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+        <div class="page-intro col-sm-6">
+            {{text.intro}}
         </div>
-        <br>
-        <br>
-        <a class="btn footer-nav" href="realisations" title="Voir mon portfolio">Voir mon Portfolio <i class="fa fa-angle-down"></i></a>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col">
+            <a class="btn footer-nav" href="realisations" title="Voir mon portfolio">Voir mon Portfolio <i class="fa fa-angle-down"></i></a>
+        </div>
     </div>
 </div>
